@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자(Selecter)</title>
+    <style>
+        * {margin: 20px;}
+        a {text-decoration: none; color:#000;}
+
+        .ex1 li {list-style: none;}
+        .ex1>nav>.lst1>li{padding-left: 24px;}
+        .ex1 .item1~li a {color:red;}
+        .ex1 .item1+li a {border: 1px solid red;}
+        li:first-child a {color:blue;}
+        li:first-of-type a{background-color: #999;}
+        li:last-child{border-bottom: 2px double #000;}
+        li:last-of-type {border-top: 3px dotted #f70;}
+        li:nth-child(2) {border-left: 3px solid navy;}
+        li:nth-of-type(2) {border-left: 3px;}
+        li:nth-child(2n) {border-left: 3px solid navy;}
+        li:nth-child(2n+1) {text-indent: -40px;}
+        li:only-child {}
+        li:only-of-type {}
+        li:empty::after {content:"내용없음"}
+        img {display: inline-block; width: 200px; height: 200px; margin: 5px;}
+        img[src] {border-style: double;}
+    </style>
+</head>
+<body>
+    <h2>선택자</h2>
+    <div class="ex1">
+        <nav class="gnb">
+            <ul class="lst">
+                <li class="item1">
+                    <a href="">항목1</a>
+                </li>
+                <li class="item2">
+                    <a href="">항목2</a>
+                </li>
+                <li class="item3">
+                    <a href="">항목3</a>
+                </li>
+                <li></li>
+            </ul>
+            <ol class="lst2">
+                <li class="item4">
+                    <a href="">항목4</a>
+                </li>
+                <li class="item5">
+                    <a href="">항목5</a>
+                </li>
+                <li class="item6">
+                    <a href="">항목6</a>
+                </li>
+                <li class="item7">
+                    <a href="">항목7</a>
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <h2>속성 선택자</h2>
+    
+    <h2>링크 선택자</h2>
+</body>
+</html>
