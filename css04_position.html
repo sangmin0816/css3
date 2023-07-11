@@ -4,6 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>위치 및 레이아웃 관련 속성</title>
+    <style>
+        .lst{list-style: none; clear: both; width: 1290px;}
+        .lst::after{content:""; display:block; width:100%; clear: both;}
+        .lst li{width: 300px; height: 340px; background-color: #fff; box-sizing: border-box; border: 1px solid black;}
+        .lst li:nth-child(4n){margin-right:0;}
+        .imgbox{width: 200px;height: 200px;background-color: navy; margin: 24px auto;}
+        .cate_tit{padding-left: 50px;}
+        .cate_comment{padding-left: 50px;}
+
+        .pos1 .lst li:nth-child(3){clear:both;}
+        
+        .pos2 .lst li{position:relative;}
+        .pos2 .lst li:nth-child(2){left: 50px; top: 50px;}
+        .pos2 .lst li:nth-child(3){left: -50px; top: -50px;}
+        
+        .po3 .lst{position:relative;}
+        .pos3 .lst li{position:absolute;}
+        .po3 .lst li:nth-child(1){z-index:100; left: -50px; top: -50px;}
+        .po3 .lst li:nth-child(2){z-index:99; left: 50px; top: 50px;}
+        .po3 .lst li:nth-child(3){z-index:98; left: 150px; top: 150px;}
+        .po3 .lst li:nth-child(4){z-index:97; left: 250px; top: 250px;}
+        .po3 .lst li:nth-child(5){z-index:96; left: 350px; top: 350px;}
+        .po3 .lst li:nth-child(6){z-index:95; left: 450px; top: 450px;}
+
+        .pos4 .lst li{position:fixed; z-index: 999;}
+        .pos4 .lst li:first-child{right: 50px; top: 50px;}
+        .pos4 .lst li:nth-child(2){left: 50px; top: 50px;}
+        .pos4 .lst li:nth-child(3){right: 50px; bottom: 50px;}
+        .pos4 .lst li:nth-child(4){left: 50px; bottom: 50px;}
+        .pos4 .lst li:nth-child(5), .pos4 .lst li:nth-child(6){display: none;}
+    </style>
 </head>
 <body>
     
