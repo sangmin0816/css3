@@ -5,14 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * [id="alink"]{color: red;}
-        * [id|="link"]{color: orange;}
-        a::before{content: "앞  ";}
-        a::after{content: "  뒤";}
-        p::first-line{font-size: 50px;}
-        p[id|="luigi"] {color:red;}
+        p[title]{border-bottom: 1px solid black;}
+        p[id="a"]{background-color: lightpink;}
+        p[id~="a"]{color: red;}
+        p[id|="bb"]{background-color: lightgoldenrodyellow;}
+        p[id^="bb"]{border-top: 2px dotted green;}
+        p[id$="cc"]{border-bottom: 2px dashed skyblue;}
+        p[id*="d"]{border-left: 2px solid blue;}
     </style>
 </head>
 <body>
+    <p title="title">1 only title</p>
+    <p id="a">2 "a"</p>
+    <p id="a bb">3 "a bb"</p>
+    <p id="bb">4 "bb"</p>
+    <p id="bb- a-">5 "bb- a-"</p>
+    <p id="bb-a cc">6 "bb-a cc"</p>
+    <p id="cc">7 "cc"</p>
+    <p id="d-cc">8 "d-cc"</p>
+    <p id="abcde">9 "abcde"</p>
 </body>
 </html>
+

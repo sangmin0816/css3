@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <style>
+        p[title]{border-bottom: 1px solid black;}
+        p[id="a"]{background-color: lightpink;}
+        p[id~="a"]{color: red;}
+        p[id|="bb"]{background-color: lightgoldenrodyellow;}
+        p[id^="bb"]{border-top: 2px dotted green;}
+        p[id$="cc"]{border-bottom: 2px dashed skyblue;}
+        p[id*="d"]{border-left: 2px solid blue;}
+        section p{border: 1px black solid;}
+        section>p{width: 50%;}
+        h1+p{color:red;}
+        h2+p{color:blue;}
+        h1~p{background-color: pink;}
+        li:first-of-type{color:red;}
+        li:first-child{background-color: pink;}
+        li:last-child{color:blue;}
+        li:last-of-type{background-color: aqua;}
+        li:nth-child(2){color:orange;}
+        li:nth-of-type(2){background-color: beige;}
+        li:nth-child(2n){border-bottom: 1px gray solid;}
+        li:nth-child(2n+1){border-bottom: 1px green dotted;}
+        li:only-child{background-color: lightgreen;}
+        p:only-of-type{background-color: lightcoral;}
+        h1:empty::before{content: "비어있음";}
+    </style>
+</head>
+<body>
+    <p title="title">1 only title</p>
+    <p id="a">2 "a"</p>
+    <p id="a bb">3 "a bb"</p>
+    <p id="bb">4 "bb"</p>
+    <p id="bb- a-">5 "bb- a-"</p>
+    <p id="bb-a cc">6 "bb-a cc"</p>
+    <p id="cc">7 "cc"</p>
+    <p id="d-cc">8 "d-cc"</p>
+    <p id="abcde">9 "abcde"</p>
+    <hr>
+    <section>
+        <h1>H1</h1>
+        <p>p1</p>
+        <p>p2</p>
+        <div>
+            <p>p3</p>
+            <p>p4</p>
+        </div>
+        <h2>H2</h2>
+        <hr>
+        <p>p5</p>
+    </section>
+    <hr>
+    <h1></h1>
+    <ul>ul1
+        <li>ul1_li1</li>
+        <li>ul1_li2</li>
+        <li>ul1_li3</li>
+    </ul>
+    <ol>ol
+        <li>ol_li1</li>
+    </ol>
+    <ul>ul2
+        <p>paragrpaph</p>
+        <li>ul2_li1</li>
+        <li>ul2_li2</li>
+        <li>ul2_li3</li>
+    </ul>
+</body>
+</html>
