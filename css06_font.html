@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font properties</title>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'PyeongChangPeace-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+        #font_area{width: 300px; margin: 20px auto; border: 2px dotted gray; padding: 20px;}
+        .f1 {color:red; font-size:20pt; line-height: 3; font-weight: bold;}
+        .f1 span {font-weight: 200; color: deepskyblue; }
+        .f2 {font-stretch: extra-expanded; text-transform:uppercase; }
+        .f3 {text-transform: capitalize; font-variant: small-caps;}
+        .f4 {font-size: 20px; text-indent: 24px; font-style: italic; font-family: 'PyeongChangPeace-Bold', serif; letter-spacing: 8px;}
+        .f5 {font-size: 20px; text-indent: -15px; font-style: oblique; font-family: 'Diphylleia', serif;}
+        .f6 {text-decoration: underline;}
+        .f7 {}
+        .f8 {width: 120px; margin: 40px auto; white-space: normal; word-break:keep-all;}
+        .f10 {overflow: hidden; white-space:nowrap; text-overflow: ellipsis;}
+    </style>
+</head>
+<body>   
+    <div id="font_area">
+        <p class="f1">font1 <span>style1</span> test1 폰트1 스타일1 테스트1</p>
+        <p class="f2">font2 style2 test2 폰트2 스타일2 테스트2</p>
+        <p class="f3">font3 style3 test3 폰트3 스타일3 테스트3</p>
+        <p class="f4">font4 style4 test4 폰트4 스타일4 테스트4</p>
+        <p class="f5">font5 style5 test5 폰트5 스타일5 테스트5</p>
+        <p class="f6">font6 style6 test6 폰트6 스타일6 테스트6</p>
+        <p class="f7">font7 style7 test7 폰트7 스타일7 테스트7</p>
+        <p class="f8">font8 style8 test8 폰트8 스타일8 테스트8</p>
+        <p class="f9">font9 style9 test9 폰트9 스타일9 테스트9</p>
+        <p class="f10">font10 style10 test10 폰트10 스타일10 테스트10</p>
+    </div>
+</body>
+</html>

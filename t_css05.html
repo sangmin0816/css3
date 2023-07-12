@@ -14,7 +14,7 @@
     #page1 { background-color:rgba(212, 110, 18, 0.75); }
     #con { width:1280px; margin: 30px auto; }
 
-    #page2 { background-image: url("./sakura.png"), url("./bg1.jpg"); 
+    #page2 { background-image: url("./img/sakura.png"), url("./bg1.jpg"); 
     background-repeat: no-repeat; 
     background-size:300px auto, cover; 
     background-position:center bottom, center center; 
@@ -24,15 +24,21 @@
     margin:20px auto; border:30px solid rgba(0,0,0,0.35); 
     padding:100px; font-size:100px; line-height: 600px; 
     text-align: center; 
-    background-image: url("./bg1.jpg"); 
+    background-image: url("./img/bg1.jpg"); 
     background-size:80% auto; background-repeat:repeat-x; 
     background-position: 0 0; background-origin:border-box;
     background-clip: content-box; 
     /* background-clip : 배경이미지가 적용되는 범위 */
     /* background-origin : 배경이미지가 어디 부터 시작할지 */
     }
+    
+    #page4 { background:#ff0 url("./img/bg1.jpg") center center/100% auto no-repeat fixed; }
 
-    #page4 { background:#ff0 url("./bg1.jpg") center center/100% auto no-repeat fixed; }
+    .page {overflow: hidden;}
+    .page .vs{width: 100%; height: auto; max-height: 100vh;}
+    .vs img {display:block; width: 100%; height: auto;}
+
+
     </style>
 </head>
 <body>
@@ -50,6 +56,11 @@
         <section class="page" id="page4">
             <h2 class="page_tit">페이지제목4</h2>
         </section>
+        <section class="page" id="page5">
+            <h2 class="page_tit">페이지제목5</h2>
+            <figure class="vs"><img src="./img/bg1.jpg" alt="배너1"></figure>
+        </section>
+
     </div>
     <div id="con">
     <h1>배경 관련 속성</h1>
@@ -67,7 +78,7 @@
         크기(size)는 필수적으로 순서를 지켜야 함. 
     </p>
     <br><hr><br>
-    
+
     <h2>배경색(color)</h2>
     <h3>단색의 경우</h3>
     <p>background : rgba(221, 120, 18, 0.8);</p>
