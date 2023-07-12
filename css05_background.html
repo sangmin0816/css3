@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #canvas1 {margin: 10px; width: 90vw; height: 90vh; background: rgb(247, 216, 174) url("./img/frame.webp") center center/100px auto no-repeat fixed; clear: both;}
+        * {margin: 0; padding: 0;}
+        #canvas1 {width: 90vw; height: 90vh; background: rgb(247, 216, 174) url("./img/frame.webp") center center/100px auto no-repeat fixed;}
 
-        .frame {margin: 10px; padding: 10px; width: 100px; height: 150px; position:relative; border: 10px gray groove; display: inline-block; overflow: hidden;}
+        .frame {margin: 10px; padding: 10px; width: 100px; height: 150px; position:relative; border: 10px rgba(128, 128, 128, 0.422) groove; display: inline-block; background-image: url("./img/mario_luigi.png"); overflow: auto}
 
+        #frame1{background-color: aqua;}
+        #frame2{
+            background-image: url("./img/sakura.png"), url("./img/mario_luigi.png");
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: left bottom, center top;}
+        #frame3{background-size:50%;}
+        #frame4{background-position: center center; background-size:50%; background-repeat: no-repeat;}
+        #frame5{background-image: url("./img/supermario_background.jpg"); background-size:120%; background-repeat: no-repeat; background-origin: border-box;}
+
+        #frame6{background-image: url("./img/supermario_background.jpg"); background-size:150px; background-repeat: no-repeat; background-origin: content-box;}
+
+        #frame7{background-image: url("./img/supermario_background.jpg"); background-size:150px; background-repeat: no-repeat; background-origin: border-box; background-clip: content-box;}
+
+        #frame8{background-attachment: local;}
     </style>
 </head>
 <body>
@@ -35,7 +51,15 @@
             <h2 class="frame_title">frame7</h2>
         </section>
         <section class="frame" id="frame8">
-            <h2 class="frame_title">frame8</h2>
+            <h2 class="frame_title">frame8 
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br></h2>
         </section>
     </div>
 </body>
