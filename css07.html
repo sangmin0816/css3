@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+    <style>
+        li {margin: 10px;}
+        #mouse li {width: 100px; height: 40px; border: 2px gold solid; display: inline-block; margin: 10px; padding: 10px;}
+        #li_mouse23 {cursor: url("./img/yoshi.cur"), pointer;}
+        #li_style_image{list-style-image: url("./img/yoshi.cur");}
+
+        #shadow p{font-size:40px; font-weight: bolder; margin:20px; width: max-content; padding: 10px; font-family: "Diphylleia", serif;}
+
+    
+        #shadow section{display:inline-block; margin: 10px; width: 100px; height: 40px; border: 1px solid gray; padding: 10px;}
+
+        #shadow_neon {text-shadow: 0 0 2px white, 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de; color: white; background-color: black;}
+        #shadow_blank {text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; color: white}
+    </style>
+</head>
+<body>
+    <ul id="mouse">
+        <li id="li_mouse1" style="cursor: alias;">alias</li>
+        <li id="li_mouse2" style="cursor: all-scroll;">all-scroll</li>
+        <li id="li_mouse3" style="cursor: auto;">auto</li>
+        <li id="li_mouse4" style="cursor: cell;">cell</li>
+        <li id="li_mouse5" style="cursor: col-resize;">col-resize</li>
+        <li id="li_mouse6" style="cursor: row-resize;">row-resize</li>
+        <li id="li_mouse7" style="cursor: nwse-resize;">nwse-resize</li>
+        <li id="li_mouse8" style="cursor: context;">context</li>
+        <li id="li_mouse9" style="cursor: copy;">copy</li>
+        <li id="li_mouse10" style="cursor: crosshair;">crosshair</li>
+        <li id="li_mouse11" style="cursor: default;">default</li>
+        <li id="li_mouse12" style="cursor: grab;">grab</li>
+        <li id="li_mouse13" style="cursor: grabbing;">grabbing</li>
+        <li id="li_mouse14" style="cursor: help;">help</li>
+        <li id="li_mouse15" style="cursor: move;">move</li>
+        <li id="li_mouse16" style="cursor: no-drop;">no-drop</li>
+        <li id="li_mouse17" style="cursor: not-allowed;">not-allowed</li>
+        <li id="li_mouse18" style="cursor: pointer;">pointer</li>
+        <li id="li_mouse19" style="cursor: progress;">progress</li>
+        <li id="li_mouse20" style="cursor:zoom-in;">zoom-in</li>
+        <li id="li_mouse21" style="cursor: zoom-out;">zoom-out</li>
+        <li id="li_mouse22" style="cursor: text;">text</li>
+        <li id="li_mouse23">img</li>
+    </ul>
+    <hr>
+    <ul id="list-style">
+        <li id="li_style_type1" style="list-style-type: disc;">disc</li>
+        <li id="li_style_type2" style="list-style-type: circle;">circle</li>
+        <li id="li_style_type3" style="list-style-type: square;">square</li>
+        <li id="li_style_type4" style="list-style-type: decimal;">decimal</li>
+        <li id="li_style_type5" style="list-style-type: armenian;">armenian</li>
+        <li id="li_style_type6" style="list-style-type: georgian;">georgian</li>
+        <li id="li_style_type7" style="list-style-type: hebrew;">hebrew</li>
+        <li id="li_style_type8" style="list-style-type: hiragana;">hiragana</li>
+        <li id="li_style_type9" style="list-style-type: katakana;">katakana</li>
+        <li id="li_style_type10" style="list-style-type: lower-alpha;">lower-alpha</li>
+        <li id="li_style_type11" style="list-style-type: lower-greek;">lower-greek</li>
+        <li id="li_style_type12" style="list-style-type: lower-latin;">lower-latin</li>
+        <li id="li_style_type13" style="list-style-type: lower-roman;">lower-roman</li>
+        <li id="li_style_type14" style="list-style-type: upper-alpha;">upper-alpha</li>
+        <li id="li_style_type15" style="list-style-type: upper-greek;">upper-greek</li>
+        <li id="li_style_type16" style="list-style-type: upper-latin;">upper-latin</li>
+        <li id="li_style_type17" style="list-style-type: upper-roman;">upper-roman</li>
+        <li id="li_style_type18" style="list-style-type: cjk-ideographic;">cjk-ideographic</li>
+        <li id="li_style_position" style="list-style-position: inside;"> list position inside</li>
+        <li id="li_style_position" style="list-style-position: outside;"> list position outside</li>
+        <li id="li_style_image">list-style-image</li>
+    </ul>
+    <hr>
+    <div id="shadow">
+        <p id="shadow1" style="text-shadow:10px 10px 1px rgba(128, 128, 128, 0.281);">Text-Shadow1</p>
+        <p id="shadow2" style="text-shadow:-10px -10px 3px rgba(128, 128, 128, 0.281);">Text-Shadow2</p>
+        <p id="shadow3" style="text-shadow: 3px 3px 1px rgba(16, 187, 235, 0.653), 4px 4px 2px rgba(16, 187, 235, 0.653); text-decoration: underline wavy; color: skyblue;">Text-Shadow3</p>
+        
+        <p id="shadow_neon">Text-Shadow-NEON</p>
+
+        <p id="shadow_blank">Text-Shadow-Blank</p>
+
+        <p id="shadow_solid" style="text-shadow: 3px 3px white, 4px 4px black, 5px 5px 3px gray; color: seagreen;">Text-Shadow-Solid</p>
+
+        <section id="shadow1" style="box-shadow: 10px 10px 1px rgba(128, 128, 128, 0.281);">box-shadow1</section>
+        <section id="shadow2" style="box-shadow:-10px -10px 1px rgba(128, 128, 128, 0.281);">box-shadow2</section>
+        <section id="shadow3" style="box-shadow:10px 10px 1px 15px rgba(128, 128, 128, 0.281);">box-shadow3</section>
+    </div>
+</body>
+</html>

@@ -5,25 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        p[title]{border-bottom: 1px solid black;}
-        p[id="a"]{background-color: lightpink;}
-        p[id~="a"]{color: red;}
-        p[id|="bb"]{background-color: lightgoldenrodyellow;}
-        p[id^="bb"]{border-top: 2px dotted green;}
-        p[id$="cc"]{border-bottom: 2px dashed skyblue;}
-        p[id*="d"]{border-left: 2px solid blue;}
+        .frame {margin: 10px; padding: 10px; width: 100px; height: 150px; position:relative; border: 10px rgba(128, 128, 128, 0.422) groove; display: inline-block; background-image: url("./img/mario_luigi.png"); overflow: auto}
+        
     </style>
 </head>
 <body>
-    <p title="title">1 only title</p>
-    <p id="a">2 "a"</p>
-    <p id="a bb">3 "a bb"</p>
-    <p id="bb">4 "bb"</p>
-    <p id="bb- a-">5 "bb- a-"</p>
-    <p id="bb-a cc">6 "bb-a cc"</p>
-    <p id="cc">7 "cc"</p>
-    <p id="d-cc">8 "d-cc"</p>
-    <p id="abcde">9 "abcde"</p>
+    <div id="canvas1">
+        <section class="frame" id="frame1">
+            <h2 class="frame_title">frame1</h2>
+        </section>
+        <section class="frame" id="frame2">
+            <h2 class="frame_title">frame2</h2>
+        </section>
+        <section class="frame" id="frame3">
+            <h2 class="frame_title">frame3</h2>
+        </section>
+        <section class="frame" id="frame4">
+            <h2 class="frame_title">frame4</h2>
+        </section>
+        <section class="frame" id="frame5">
+            <h2 class="frame_title">frame5</h2>
+        </section>
+        <section class="frame" id="frame6">
+            <h2 class="frame_title">frame6</h2>
+        </section>
+        <section class="frame" id="frame7">
+            <h2 class="frame_title">frame7</h2>
+        </section>
+        <section class="frame" id="frame8">
+            <h2 class="frame_title">frame8 
+            </h2>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </section>
+    </div>
 </body>
 </html>
-

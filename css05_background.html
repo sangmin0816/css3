@@ -3,64 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>루이지 전시회</title>
     <style>
-        * {margin: 0; padding: 0;}
-        #canvas1 {width: 90vw; height: 90vh; background: rgb(247, 216, 174) url("./img/frame.webp") center center/100px auto no-repeat fixed;}
+        .canvas {margin: 10px; padding: 10px; border: 3px solid gray; width:fit-content;}
 
-        .frame {margin: 10px; padding: 10px; width: 100px; height: 150px; position:relative; border: 10px rgba(128, 128, 128, 0.422) groove; display: inline-block; background-image: url("./img/mario_luigi.png"); overflow: auto}
+        .frame {width: 100px; height: 150px; border: 10px groove rgba(106, 76, 27, 0.5); display: inline-block; overflow: auto; margin: auto auto; background-image: url("./img/mario_luigi.png"); padding: 5px;}
 
-        #frame1{background-color: aqua;}
-        #frame2{
-            background-image: url("./img/sakura.png"), url("./img/mario_luigi.png");
-            background-size: 70%;
-            background-repeat: no-repeat;
-            background-position: left bottom, center top;}
-        #frame3{background-size:50%;}
-        #frame4{background-position: center center; background-size:50%; background-repeat: no-repeat;}
-        #frame5{background-image: url("./img/supermario_background.jpg"); background-size:120%; background-repeat: no-repeat; background-origin: border-box;}
+        #background_position .frame {
+            background-image: url("./img/mario_luigi.png"), url("./img/sakura.png"); background-size: 50%; background-repeat: no-repeat;}
 
-        #frame6{background-image: url("./img/supermario_background.jpg"); background-size:150px; background-repeat: no-repeat; background-origin: content-box;}
+        #background_repeat .frame{background-size: 40%;}
+        #background_origin .frame{background-image: url("./img/supermario_background.jpg"); background-size: 150px; background-repeat: no-repeat;}
+        #background_clip .frame{background-image: url("./img/supermario_background.jpg"); background-size: 150px; background-repeat: no-repeat;}
 
-        #frame7{background-image: url("./img/supermario_background.jpg"); background-size:150px; background-repeat: no-repeat; background-origin: border-box; background-clip: content-box;}
+        #filter_property .frame{background-size: 100%; background-repeat: no-repeat; background-position: center center;}
 
-        #frame8{background-attachment: local;}
     </style>
 </head>
 <body>
-    <div id="canvas1">
-        <section class="frame" id="frame1">
-            <h2 class="frame_title">frame1</h2>
-        </section>
-        <section class="frame" id="frame2">
-            <h2 class="frame_title">frame2</h2>
-        </section>
-        <section class="frame" id="frame3">
-            <h2 class="frame_title">frame3</h2>
-        </section>
-        <section class="frame" id="frame4">
-            <h2 class="frame_title">frame4</h2>
-        </section>
-        <section class="frame" id="frame5">
-            <h2 class="frame_title">frame5</h2>
-        </section>
-        <section class="frame" id="frame6">
-            <h2 class="frame_title">frame6</h2>
-        </section>
-        <section class="frame" id="frame7">
-            <h2 class="frame_title">frame7</h2>
-        </section>
-        <section class="frame" id="frame8">
-            <h2 class="frame_title">frame8 
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br></h2>
-        </section>
+    <h1>루이지 전시회</h1>
+    <div class="canvas" id="background">
+        <h3>통합 속성</h3>
+        <section class="frame" id="frame_background" style="background: skyblue url(./img/mario_luigi.png) center center/50% no-repeat content-box padding-box scroll;">skyblue url(./img/mario_luigi.png) center center/300px no-repeat content-box padding-box scroll</section>
+        <section class="frame" id="frame_background2" style="background: radial-gradient(white, skyblue);">radial-gradient</section>
+    </div>
+    <div class="canvas" id="background_position">
+        <h3>background-position</h3>
+        <section class="frame" id="frame_position_1" style="background-position: right top, center bottom">right top, center bottom</section>
+        <section class="frame" id="frame_position_2" style="background-position: center center, right bottom;">center center, right bottom</section>
+        <section class="frame" id="frame_position_2" style="background-position: -20px -20px, 70px 110px;">-20px -20px, 70px 110px</section>
+    </div>
+    <div class="canvas" id="background_size">
+        <h3>background-size</h3>
+        <section class="frame" id="frame_size1" style="background-size: 100px;">100px auto</section>
+        <section class="frame" id="frame_size2" style="background-size: cover;">cover</section>
+        <section class="frame" id="frame_size3" style="background-size: 30%;">30%</section>
+    </div>
+    <div class="canvas" id="background_repeat">
+        <h3>background-repeat</h3>
+        <section class="frame" id="frame_repeat1">repeat</section>
+        <section class="frame" id="frame_repeat2" style="background-repeat: no-repeat;">no-repeat</section>
+        <section class="frame" id="frame_repeat3" style="background-repeat: repeat-x;">repeat-x</section>
+        <section class="frame" id="frame_repeat4" style="background-repeat: repeat-y;">repeat-y</section>
+    </div>
+    <div class="canvas" id="background_origin">
+        <h3>background-origin</h3>
+        <section class="frame" id="frame_origin1" style="background-origin: padding-box;">padding-box</section>
+        <section class="frame" id="frame_origin2" style="background-origin:content-box;">content-box</section>
+        <section class="frame" id="frame_origin3" style="background-origin:border-box;">border-box</section>
+    </div>
+    <div class="canvas" id="background_clip">
+        <h3>backgroun-clip</h3>
+        <section class="frame" id="frmae_clip1" style="background-clip:padding-box;">padding</section>
+        <section class="frame" id="frmae_clip3" style="background-clip:content-box;">content</section>
+        <section class="frame" id="frmae_clip2" style="background-clip:border-box;">border</section>
+    </div>
+    <div class="canvas" id="background_attachment">
+        <h3>background-attachment</h3>
+        <section class="frame" id="frame_attachment1" style="background-attachment:fixed;">fixed</section>
+        <section class="frame" id="frame_attachment2" style="background-attachment:scroll;">scroll</section>
+        <section class="frame" id="frame_attachment3" style="background-attachment:local;">local<br><br><br><br><br><br><br><br><br><br><br><br></section>
+    </div>
+    <div class="canvas" id="filter_property">
+        <h3>filter-property</h3>
+        <section class="frame" id="filter1" style="filter:blur(2px);">blur(2px)</section>
+        <section class="frame" id="filter2" style="filter:brightness(150%);">brightness (150%)</section>
+        <section class="frame" id="filter3" style="filter:contrast(30%);">contrast(30%)</section>
+        <section class="frame" id="filter4" style="filter:grayscale(90%);">grayscale (90%)</section>
+        <section class="frame" id="filter5" style="filter:hue-rotate(40);">hue-rotate(40)</section>
+        <section class="frame" id="filter6" style="filter:drop-shadow(3px 3px 1px gray);">drop-shadow(3px 3px 1px gray)</section>
+        <section class="frame" id="filter7" style="filter:invert(30%);">invert (30%)</section>
+        <section class="frame" id="filter8" style="filter:saturate(10%);">saturate (10%)</section>
+        <section class="frame" id="filter9" style="filter:sepia(20%);">sepia (20%)</section>
     </div>
 </body>
 </html>
